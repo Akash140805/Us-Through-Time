@@ -439,7 +439,8 @@ main{position:relative;z-index:10}
   transform:scale(.98);
   transition:opacity .5s ease,transform .5s ease;
   border-radius:8px;
-  margin:28px
+  margin:28px;
+  overflow-y: auto;
 }
 
 .slide.active{
@@ -535,6 +536,22 @@ main{position:relative;z-index:10}
   .trees{display:none}
   .letter-card{height:76vh}
 }
+
+@media (max-width: 768px) {
+  .slides {
+    height: 100dvh;
+  }
+
+  .slide {
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  .paper-note {
+    margin-bottom: 40px;
+  }
+}
+
 
 /* ---------- True background blur (FIXED) ---------- */
 #blurOverlay {
@@ -642,6 +659,7 @@ main{position:relative;z-index:10}
   padding: 12px 28px;
   font-size: 16px;
   border-radius: 999px;
+  margin-top: 20px;
 
   background: linear-gradient(90deg,#ff7fb2,#ffd1e6);
   box-shadow: 0 12px 30px rgba(255,120,160,.25);
