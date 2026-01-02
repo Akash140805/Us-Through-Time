@@ -538,18 +538,23 @@ main{position:relative;z-index:10}
 }
 
 @media (max-width: 768px) {
-  .slides {
-    height: 100dvh;
-  }
+  /* ✅ TIMELINE MOBILE FIX — SAFE */
+.slide {
+  overflow: hidden; /* no scrolling on slide */
+}
 
-  .slide {
-    align-items: flex-start;
-    padding-top: 60px;
-  }
+.paper-note {
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 28px;
+  -webkit-overflow-scrolling: touch;
+}
 
-  .paper-note {
-    margin-bottom: 40px;
-  }
+.paper-note .cta {
+  margin-top: 20px;
+}
+
 }
 
 
